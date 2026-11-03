@@ -1,17 +1,32 @@
-# book_reader_app
+# Nom Unsh — Book Reader App
 
-A new Flutter project.
+F.ITM309 Mobile Technology хичээлийн Flutter/Dart бие даалтын прототип. UI нь өгсөн Figma загварын номын сан, нэвтрэлт, уншигч, профайл болон тохиргооны урсгалд тулгуурлана.
 
-## Getting Started
+## Ажиллуулах
 
-This project is a starting point for a Flutter application.
+```sh
+flutter pub get
+flutter run
+```
 
-A few resources to get you started if this is your first Flutter project:
+## Боломжууд
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+- Ном, манга, light novel хайх, төрлөөр шүүх, дуртай жагсаалт удирдах
+- Номын мэдээлэл, бүлгийн жагсаалт, текст болон manga уншигчийн demo
+- Файлын эх сурвалж сонгон номын мэдээлэл нэмэх UI
+- Light/dark mode, уншлагын тохиргоо, профайл, зохиогчийн самбар
+- Hive NoSQL-д номын сан, дуртай, уншлагын явц, theme болон профайлыг хадгалах
+- RFC 6238 TOTP setup, зургаан оронтой код, таван алдааны дараах 30 секундын түгжээ
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Демо
+
+1. Welcome дэлгэцээс **Get started** эсвэл **I already have an account** сонгоно.
+2. Бүртгүүлэх эсвэл хүчинтэй имэйл, 8-аас дээш тэмдэгттэй нууц үг оруулна.
+3. Authenticator аппд QR код уншуулж, одоогийн TOTP кодоор баталгаажуулна. Хичээлийн демонд код **Demo code** гэж харагдана.
+4. Дараагийн нэвтрэлтэд Authenticator кодыг оруулсны дараа номын сан нээгдэнэ.
+
+Нууц үг сэргээх демо код: `4821`. Нэвтрэх, Google/Apple болон файл унших хэсгийн сервер/парсер холбогдоогүй.
+
+## Хүрээ
+
+Энэ нь сургалтын локал демо. Нууц үгийг сервер баталгаажуулахгүй; TOTP secret төхөөрөмжийн Hive санд хадгалагдана. Бодит үйлчилгээ болгоход authentication backend, сервер талын TOTP баталгаажуулалт, secret хамгаалалт, cloud sync болон EPUB/PDF/TXT/CBZ парсер шаардлагатай.
